@@ -35,12 +35,12 @@ section { padding: 80px 0; }
 .service-card h3 { font-size: 1.6rem; margin: 20px 0; color: #1f2937; }
 .service-card p { color: #6b7280; line-height: 1.8; }
 .portfolio { background: #f9fafb; }
-.portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; }
-.portfolio-item { position: relative; border-radius: 12px; overflow: hidden; height: 300px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-.portfolio-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
-.portfolio-item:hover img { transform: scale(1.1); }
-.portfolio-overlay { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); padding: 30px 20px 20px; color: white; }
-.contact { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+.portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
+      .portfolio-card { background: white; padding: 40px 30px; border-radius: 12px; text-align: center; box-shadow: 0 2px 15px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; }
+      .portfolio-card:hover { transform: translateY(-5px); box-shadow: 0 5px 25px rgba(0,0,0,0.15); }
+      .portfolio-number { font-size: 3rem; font-weight: 700; color: #667eea; margin-bottom: 15px; }
+      .portfolio-card h3 { font-size: 1.3rem; color: #2d3748; margin-bottom: 10px; }
+      .portfolio-card p { font-size: 1rem; color: #718096; line-height: 1.6; }
 .contact h2, .contact p { color: white; }
 .contact-info { display: flex; justify-content: center; gap: 40px; margin-top: 30px; flex-wrap: wrap; }
 .contact-item { display: flex; align-items: center; gap: 10px; font-size: 1.1rem; }
@@ -113,20 +113,22 @@ footer { background: #1f2937; color: white; text-align: center; padding: 40px 0;
 <p>Successful digital marketing campaigns that drive real results</p>
 </div>
 <div class="portfolio-grid">
-<div class="portfolio-item">
-<img src="https://images.unsplash.com/photo-1557608497-c15e26cd5ce2470f93e8654a673f9c5e?w=800' alt='SEO Analytics Dashboard'/>
-<div class="portfolio-overlay"><h3>SEO Campaign</h3><p>200% traffic increase</p></div>
-</div>
-<div class="portfolio-item">
-<img src='https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800' alt='Social Media Marketing'/>
-<div class="portfolio-overlay"><h3>Social Media</h3><p>50K+ engagement</p></div>
-</div>
-<div class="portfolio-item">
-<img src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800' alt='Digital Marketing Strategy'/>
-<div class="portfolio-overlay"><h3>PPC Campaign</h3><p>300% ROI achieved</p></div>
-</div>
-</div>
-</div>
+        <div class="portfolio-card">
+          <div class="portfolio-number">200%</div>
+          <h3>SEO Campaign</h3>
+          <p>Increased organic traffic for hospitality client</p>
+        </div>
+        <div class="portfolio-card">
+          <div class="portfolio-number">50K+</div>
+          <h3>Social Media</h3>
+          <p>Engagement boost for travel business</p>
+        </div>
+        <div class="portfolio-card">
+          <div class="portfolio-number">300%</div>
+          <h3>PPC Campaign</h3>
+          <p>ROI achieved for Dubai tourism packages</p>
+        </div>
+      </div>
 </section>
 <section id="contact" class="contact">
 <div class="container">
