@@ -1,366 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Puli Digital - SEO, Digital Marketing & Website Design Dubai</title>
-    <meta name="description" content="Professional SEO, Digital Marketing, and Website Design services in Dubai. Transform your online presence with Puli Digital.">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333;
-            line-height: 1.6;
-            background: #fff;
-        }
-        
-        /* Header */
-        header {
-            background: #fff;
-            padding: 1rem 5%;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo-container {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo {
-            height: 60px;
-            width: 60px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-        
-        nav {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-        
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            font-size: 1rem;
-            transition: color 0.3s;
-        }
-        
-        nav a:hover {
-            color: #d4a017;
-        }
-        
-        /* Hero Section */
-        .hero {
-            min-height: 90vh;
-            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
-            padding: 5rem 5%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        
-        .hero-content {
-            max-width: 600px;
-        }
-        
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: #2c2c2c;
-            margin-bottom: 1rem;
-        }
-        
-        .hero h2 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: #d4a017;
-            margin-bottom: 2rem;
-        }
-        
-        .hero p {
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 2rem;
-            line-height: 1.8;
-        }
-        
-        .hero-buttons {
-            display: flex;
-            gap: 1.5rem;
-        }
-        
-        .btn-primary {
-            background: #2c2c2c;
-            color: #fff;
-            padding: 1rem 2.5rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .btn-primary:hover {
-            background: #d4a017;
-            transform: translateY(-2px);
-        
-        
-        .btn-secondary {
-            background: transparent;
-            color: #2c2c2c;
-            padding: 1rem 2.5rem;
-            border: 2px solid #2c2c2c;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .btn-secondary:hover {
-            background: #2c2c2c;
-            color: #fff;
-        }
-        
-        .hero-image img {
-            max-width: 450px;
-            border-radius: 10px;
-        }
-        
-        /* Section Title */
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #2c2c2c;
-            margin: 4rem 0 3rem;
-            position: relative;
-        }
-        
-        .section-title::before,
-        .section-title::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            width: 100px;
-            height: 3px;
-            background: #d4a017;
-        }
-        
-        .section-title::before {
-            right: calc(50% + 150px);
-        }
-        
-        .section-title::after {
-            left: calc(50% + 150px);
-        
-        
-        /* Services Grid */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            padding: 2rem 5% 5rem;
-        }
-        
-        .service-card {
-            background: #f9f9f9;
-            padding: 2.5rem;
-            border-radius: 10px;
-            transition: all 0.3s;
-            text-align: center;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
-        
-        .service-card h3 {
-            font-size: 1.8rem;
-            color: #2c2c2c;
-            margin-bottom: 1rem;
-        }
-        
-        .service-card p {
-            color: #666;
-            font-size: 1rem;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
-        
-        .service-card .tagline {
-            font-style: italic;
-            color: #d4a017;
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .service-card button {
-            background: #2c2c2c;
-            color: #fff;
-            border: none;
-            padding: 0.8rem 2rem;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .service-card button:hover {
-            background: #d4a017;
-        }
-        
-        /* Contact Section */
-        .contact {
-            background: #2c2c2c;
-            color: #fff;
-            padding: 4rem 5%;
-            text-align: center;
-        }
-        
-        .contact h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .contact p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .contact-btn {
-            background: #d4a017;
-            color: #fff;
-            padding: 1rem 3rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .contact-btn:hover {
-            background: #fff;
-            color: #2c2c2c;
-        }
-        
-        /* Footer */
-        footer {
-            background: #1a1a1a;
-            color: #999;
-            text-align: center;
-            padding: 2rem 5%;
-        }
-        
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            nav {
-                gap: 1rem;
-                flex-wrap: wrap;
-            }
-            
-            .hero {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .hero h1, .hero h2 {
-                font-size: 2.5rem;
-            }
-            
-            .hero-image img {
-                max-width: 300px;
-                margin-top: 2rem;
-            }
-            
-            .section-title::before,
-            .section-title::after {
-                display: none;
-            }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Puli Digital | SEO, Digital Marketing & Web Design Dubai</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; font-family:'Montserrat',Arial,sans-serif; background:#f6f7fb; color:#23242c; }
+    .header { background:linear-gradient(90deg,#3f51b5,#03c9a9); color:#fff; padding:1.6em 0 1em 0; text-align:center; }
+    .header img { max-width:90px; border-radius:50%; margin-bottom:.7em; background:#fff; border:2px solid #03c9a9;}
+    .nav { margin:1em 0 .5em 0;}
+    .nav a { color:#fff; margin:0 .75em; font-weight:600; text-decoration:none; transition:color .16s;}
+    .nav a:hover { color:yellow;}
+    .hero { padding:3em 1em 2.4em 1em; background:#e0f7fa;text-align:center;}
+    .hero h1 { color:#3f51b5;font-size:2.3em;font-weight:800;margin-bottom:.3em;}
+    .hero .cta { background:#03c9a9; color:#fff; border:none; border-radius:30px; padding:.9em 2.4em; font-size:1.16em; margin-top:1em; font-weight:700;text-decoration:none;}
+    .sections { max-width:860px; margin:2em auto; box-sizing:border-box;}
+    .section { background:#fff; border-radius:20px; box-shadow:0 2px 20px rgba(0,0,0,.09); margin-bottom:1.2em; padding:2em 1.5em;text-align:center;}
+    .section-title { color:#03c9a9; font-size:1.5em; font-weight:700; margin-bottom:0.8em;}
+    .service-icons {display:flex;flex-wrap:wrap;justify-content:center;gap:1.4em;}
+    .service-block { flex:1 1 200px; margin-bottom:2em; padding:.7em;}
+    .service-block img { width:90px; height:90px; object-fit:cover; border-radius:15px; margin-bottom:.8em; background:#e0f7fa; }
+    .service-block h3 { color:#3f51b5; font-size:1.12em;margin-bottom:.2em;}
+    .service-block p { font-size:.97em; color:#555;}
+    .testimonials { margin-top:2.2em;}
+    .testimonial-card { display:inline-block; margin:0 1em .9em 1em; background:#f3f7fd; border-radius:13px; padding:1em 1.3em; color:#347184; font-style:italic;}
+    .contact { background:#03c9a9; color:#fff; border-radius:15px; padding:1.6em 1em; text-align:center; margin-top:2.2em;}
+    .contact h2 { font-size:1.3em;margin-bottom:.6em;}
+    .contact a { color:#222; background:#eee; border-radius:14px; padding:.7em 2em; margin:0.6em .3em; text-decoration:none;display:inline-block;}
+    .footer { text-align:center;padding:1.2em 0;color:#837dcc; margin-top:1.2em;}
+    @media (max-width: 600px) {
+      .sections {padding:0 .3em;}
+      .service-icons { flex-direction:column;}
+      .service-block img { width:100%; max-width:130px; height:80px;}
+    }
+  </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo-container">
-            <img src="image.jpg" alt="Puli Digital Logo" class="logo">
-        </div>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>I'M PULI</h1>
-            <h2>DIGITAL MARKETING EXPERT</h2>
-            <p>I'm a passionate digital marketing expert based in Dubai, dedicated to helping businesses achieve exponential growth through strategic SEO, cutting-edge digital marketing, and stunning website design. Every project I deliver is driven by measurable results and sustainable online success.</p>
-            <div class="hero-buttons">
-                <button class="btn-primary" onclick="location.href='#services'">Explore My Services</button>
-                <button class="btn-secondary" onclick="location.href='#contact'">Contact Me</button>
-            </div>
-            <p style="margin-top: 2rem; font-style: italic; color: #d4a017;">#PuliDigital • Results-driven. Growth-focused. Dubai-based.</p>
-        </div>
-        <div class="hero-image">
-            <img src="image.jpg" alt="Puli - Digital Marketing Expert">
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <h2 class="section-title" id="services">Services</h2>
-    <div class="services-grid">
-        <div class="service-card">
-            <h3>SEO Services</h3>
-            <p>Dominate search engines and attract qualified organic traffic with data-driven SEO strategies. From technical audits to content optimization, we ensure your business ranks where it matters most.</p>
-            <p class="tagline">"Visibility is profitability. Let’s get you found."</p>
-            <button onclick="location.href='#contact'">Learn More →</button>
-        </div>
-        
-        <div class="service-card">
-            <h3>Digital Marketing</h3>
-            <p>Scale your business with strategic digital campaigns across Google Ads, social media, email marketing, and more. We create integrated marketing solutions that drive conversions and ROI.</p>
-            <p class="tagline">"Smart marketing. Real results. Unstoppable growth."</p>
-            <button onclick="location.href='#contact'">Learn More →</button>
-        </div>
-        
-        <div class="service-card">
-            <h3>Website Design</h3>
-            <p>Transform your online presence with modern, mobile-responsive websites that convert visitors into customers. Beautiful design meets powerful functionality for maximum impact.</p>
-            <p class="tagline">"Your website is your digital storefront. Make it count."</p>
-            <button onclick="location.href='#contact'">Learn More →</button>
-        </div>
+  <div class="header">
+    <img src="front-view-woman-working-desk-while-wearing-headset-looking-laptop_23-2148434727.avif" alt="Logo"/>
+    <div style="font-size:2em; font-weight:800;letter-spacing:.03em;">Puli Digital</div>
+    <div class="nav">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
     </div>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <h2>Let's Grow Your Business Together</h2>
-        <p>Ready to transform your digital presence? Get in touch for a free consultation.</p>
-        <button class="contact-btn" onclick="window.location.href='mailto:contact@pulidigital.com'">Get Free Consultation</button>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Puli Digital. All rights reserved. | SEO, Digital Marketing & Website Design Services in Dubai</p>
-    </footer>
+  </div>
+  <div class="hero">
+    <h1>Grow Your Business in Dubai</h1>
+    <div style="font-size:1.17em;max-width:440px;margin:auto 0 1.5em auto;">SEO, Digital Marketing, Website Design—all-in-one solutions. Stand out online & get real results.</div>
+    <a class="cta" href="#contact">Book Your Free Consultation</a>
+  </div>
+  <div class="sections">
+    <div class="section" id="about">
+      <div class="section-title">About Us</div>
+      <div>Results-driven digital marketing for Dubai. 10+ years' experience. Fast, affordable, and 100% ROI-focused!</div>
+    </div>
+    <div class="section" id="services">
+      <div class="section-title">Our Services</div>
+      <div class="service-icons">
+        <div class="service-block">
+          <img src="marketing-plan-achievement-strategy_53876-127844 (1).jpg" alt="SEO"/>
+          <h3>SEO</h3>
+          <p>Get found on Google & grow traffic. Keyword research, on-page, local SEO & analytics.</p>
+        </div>
+        <div class="service-block">
+          <img src="hands-holding-smartphone-social-media-concept_23-2150208250.avif" alt="Digital Marketing"/>
+          <h3>Digital Marketing</h3>
+          <p>Social media, Google Ads, branding, strategy & content for more leads & conversions.</p>
+        </div>
+        <div class="service-block">
+          <img src="front-view-woman-working-desk-while-wearing-headset-looking-laptop_23-2148434727.avif" alt="Web Design"/>
+          <h3>Website Design</h3>
+          <p>Mobile-ready, stunning sites. HTML & WordPress with sales-driven UI/UX.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section testimonials" id="testimonials">
+      <div class="section-title">Testimonials</div>
+      <div class="testimonial-card">"Excellent results, my website ranks better and gets more traffic now!"<br/>- Ankit, Dubai</div>
+      <div class="testimonial-card">"Professional look & creative ideas for our brand."<br/>- Sara, Abu Dhabi</div>
+      <div class="testimonial-card">"Business really grew after getting full package service."<br/>- Rohit, Sharjah</div>
+    </div>
+    <div class="contact" id="contact">
+      <h2>Let’s Start Your Project!</h2>
+      <a href="mailto:info@pulidigital.com">info@pulidigital.com</a>
+      <a href="https://wa.me/971XXXXXXXXX" target="_blank">WhatsApp Now</a>
+    </div>
+  </div>
+  <div class="footer">&copy; 2025 Puli Digital | Dubai | SEO, Digital Marketing & Web Design</div>
 </body>
 </html>
