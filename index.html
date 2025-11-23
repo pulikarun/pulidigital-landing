@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Puli Digital - SEO, Digital Marketing & Website Design Dubai</title>
-    <meta name="description" content="Professional SEO, Digital Marketing, and Website Design services in Dubai. Transform your online presence with Puli Digital.">
+    <title>Puli Digital - Professional SEO & Digital Marketing Expert in Dubai</title>
+    <meta name="description" content="Transform your business with expert SEO, Digital Marketing & Web Design services in Dubai. Proven strategies for measurable growth and ROI.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,286 +13,544 @@
             box-sizing: border-box;
         }
         
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333;
-            line-height: 1.6;
-            background: #fff;
+        :root {
+            --primary-color: #0066FF;
+            --secondary-color: #00C2FF;
+            --dark: #0A0E27;
+            --text-dark: #1A1A2E;
+            --text-light: #64748B;
+            --accent: #FF6B6B;
+            --bg-light: #F8FAFC;
+            --white: #FFFFFF;
         }
         
-        /* Header */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            background: var(--white);
+            overflow-x: hidden;
+        }
+
+        /* Header Styles */
         header {
-            background: #fff;
-            padding: 1rem 5%;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 5%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
             position: sticky;
             top: 0;
             z-index: 1000;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            transition: all 0.3s ease;
         }
         
         .logo-container {
             display: flex;
             align-items: center;
+            gap: 1rem;
         }
         
         .logo {
-            height: 60px;
-            width: 60px;
-            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            border-radius: 12px;
             object-fit: cover;
+            box-shadow: 0 4px 12px rgba(0, 102, 255, 0.15);
+        }
+        
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         nav {
             display: flex;
-            gap: 2rem;
+            gap: 2.5rem;
             align-items: center;
         }
         
         nav a {
             text-decoration: none;
-            color: #333;
+            color: var(--text-dark);
             font-weight: 500;
-            font-size: 1rem;
-            transition: color 0.3s;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            transition: width 0.3s ease;
         }
         
         nav a:hover {
-            color: #d4a017;
+            color: var(--primary-color);
         }
         
+        nav a:hover::after {
+            width: 100%;
+        }
+
         /* Hero Section */
         .hero {
-            min-height: 90vh;
-            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
-            padding: 5rem 5%;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 50%, #F0F9FF 100%);
+            padding: 8rem 5% 5rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 102, 255, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-30px, 30px) rotate(10deg); }
         }
         
         .hero-content {
-            max-width: 600px;
+            max-width: 650px;
+            z-index: 1;
+            animation: fadeInLeft 1s ease-out;
+        }
+        
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(0, 102, 255, 0.1), rgba(0, 194, 255, 0.1));
+            color: var(--primary-color);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(0, 102, 255, 0.2);
         }
         
         .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: #2c2c2c;
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--text-dark);
             margin-bottom: 1rem;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
         }
         
-        .hero h2 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: #d4a017;
-            margin-bottom: 2rem;
+        .hero h1 .gradient-text {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
-        
+
         .hero p {
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 2rem;
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
             line-height: 1.8;
+            max-width: 580px;
         }
         
         .hero-buttons {
             display: flex;
-            gap: 1.5rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
         }
         
         .btn-primary {
-            background: #2c2c2c;
-            color: #fff;
-            padding: 1rem 2.5rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            box-shadow: 0 8px 25px rgba(0, 102, 255, 0.25);
         }
         
         .btn-primary:hover {
-            background: #d4a017;
-            transform: translateY(-2px);
-        
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0, 102, 255, 0.35);
+        }
         
         .btn-secondary {
-            background: transparent;
-            color: #2c2c2c;
-            padding: 1rem 2.5rem;
-            border: 2px solid #2c2c2c;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s;
+            background: var(--white);
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
         
         .btn-secondary:hover {
-            background: #2c2c2c;
-            color: #fff;
+            background: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-3px);
         }
         
-        .hero-image img {
-            max-width: 450px;
-            border-radius: 10px;
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(0, 102, 255, 0.1);
         }
         
-        /* Section Title */
-        .section-title {
-            text-align: center;
+        .stat-item {
+            text-align: left;
+        }
+        
+        .stat-number {
             font-size: 2.5rem;
-            font-weight: 700;
-            color: #2c2c2c;
-            margin: 4rem 0 3rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 0.5rem;
+        }
+        
+        .hero-image {
+            max-width: 500px;
             position: relative;
+            z-index: 1;
+            animation: fadeInRight 1s ease-out;
         }
         
-        .section-title::before,
-        .section-title::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            width: 100px;
-            height: 3px;
-            background: #d4a017;
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 102, 255, 0.2);
         }
         
-        .section-title::before {
-            right: calc(50% + 150px);
+        /* Section Styles */
+        .section {
+            padding: 5rem 5%;
         }
         
-        .section-title::after {
-            left: calc(50% + 150px);
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
         
+        .section-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(0, 102, 255, 0.1), rgba(0, 194, 255, 0.1));
+            color: var(--primary-color);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .section-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
         
         /* Services Grid */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
-            padding: 2rem 5% 5rem;
+            margin-top: 3rem;
         }
         
         .service-card {
-            background: #f9f9f9;
+            background: var(--white);
             padding: 2.5rem;
-            border-radius: 10px;
-            transition: all 0.3s;
-            text-align: center;
+            border-radius: 20px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(0, 102, 255, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        
+        .service-card:hover::before {
+            transform: scaleX(1);
         }
         
         .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transform: translateY(-12px);
+            box-shadow: 0 20px 50px rgba(0, 102, 255, 0.15);
+            border-color: var(--primary-color);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
         }
         
         .service-card h3 {
-            font-size: 1.8rem;
-            color: #2c2c2c;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
             margin-bottom: 1rem;
         }
         
         .service-card p {
-            color: #666;
-            font-size: 1rem;
-            line-height: 1.8;
+            color: var(--text-light);
+            line-height: 1.7;
             margin-bottom: 1.5rem;
         }
         
-        .service-card .tagline {
-            font-style: italic;
-            color: #d4a017;
-            font-size: 0.95rem;
+        .service-features {
+            list-style: none;
             margin-bottom: 1.5rem;
         }
         
-        .service-card button {
-            background: #2c2c2c;
-            color: #fff;
-            border: none;
-            padding: 0.8rem 2rem;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s;
+        .service-features li {
+            padding: 0.5rem 0;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
         }
         
-        .service-card button:hover {
-            background: #d4a017;
+        .service-features li::before {
+            content: '✓';
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.2rem;
         }
         
         /* Contact Section */
         .contact {
-            background: #2c2c2c;
-            color: #fff;
-            padding: 4rem 5%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 5rem 5%;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
         }
         
         .contact h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
         }
         
         .contact p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
         }
         
-        .contact-btn {
-            background: #d4a017;
-            color: #fff;
-            padding: 1rem 3rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: all 0.3s;
+        .contact .btn {
+            background: var(--white);
+            color: var(--primary-color);
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
         }
         
-        .contact-btn:hover {
-            background: #fff;
-            color: #2c2c2c;
+        .contact .btn:hover {
+            background: var(--dark);
+            color: var(--white);
+            transform: translateY(-5px) scale(1.05);
         }
-        
+
         /* Footer */
         footer {
-            background: #1a1a1a;
-            color: #999;
+            background: var(--dark);
+            color: rgba(255, 255, 255, 0.7);
             text-align: center;
-            padding: 2rem 5%;
+            padding: 3rem 5%;
+        }
+        
+        footer p {
+            font-size: 0.95rem;
+        }
+        
+        /* Trust Section */
+        .trust-section {
+            background: var(--bg-light);
+            padding: 4rem 5%;
+        }
+        
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .badge-item {
+            text-align: center;
+        }
+        
+        .badge-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .badge-text {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: 600;
         }
         
         /* Mobile Responsive */
         @media (max-width: 768px) {
             nav {
                 gap: 1rem;
-                flex-wrap: wrap;
+                font-size: 0.85rem;
+            }
+            
+            .logo-text {
+                display: none;
             }
             
             .hero {
                 flex-direction: column;
                 text-align: center;
+                padding: 5rem 5% 3rem;
+                min-height: auto;
             }
             
-            .hero h1, .hero h2 {
+            .hero h1 {
                 font-size: 2.5rem;
             }
             
-            .hero-image img {
-                max-width: 300px;
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .hero-stats {
+                flex-wrap: wrap;
+                gap: 2rem;
+                justify-content: center;
+            }
+            
+            .hero-image {
+                max-width: 100%;
                 margin-top: 2rem;
             }
             
-            .section-title::before,
-            .section-title::after {
-                display: none;
+            .section-title {
+                font-size: 2rem;
             }
             
             .services-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .contact h2 {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
             }
         }
     </style>
@@ -301,10 +560,11 @@
     <header>
         <div class="logo-container">
             <img src="image.jpg" alt="Puli Digital Logo" class="logo">
+            <span class="logo-text">Puli Digital</span>
         </div>
         <nav>
-            <a href="#about">About</a>
             <a href="#services">Services</a>
+            <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -312,55 +572,124 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>I'M PULI</h1>
-            <h2>DIGITAL MARKETING EXPERT</h2>
-            <p>I'm a passionate digital marketing expert based in Dubai, dedicated to helping businesses achieve exponential growth through strategic SEO, cutting-edge digital marketing, and stunning website design. Every project I deliver is driven by measurable results and sustainable online success.</p>
+            <div class="hero-badge">🚀 Dubai's Digital Marketing Expert</div>
+            <h1>Transform Your Business with <span class="gradient-text">Results-Driven Digital Marketing</span></h1>
+            <p>I'm Puli, a passionate digital marketing strategist specializing in SEO, performance marketing, and web design. I help Dubai businesses achieve exponential growth through data-driven strategies and innovative solutions.</p>
             <div class="hero-buttons">
-                <button class="btn-primary" onclick="location.href='#services'">Explore My Services</button>
-                <button class="btn-secondary" onclick="location.href='#contact'">Contact Me</button>
+                <button class="btn btn-primary" onclick="location.href='#contact'">Get Free Consultation</button>
+                <button class="btn btn-secondary" onclick="location.href='#services'">View Services</button>
             </div>
-            <p style="margin-top: 2rem; font-style: italic; color: #d4a017;">#PuliDigital • Results-driven. Growth-focused. Dubai-based.</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+            </div>
         </div>
         <div class="hero-image">
-            <img src="image.jpg" alt="Puli - Digital Marketing Expert">
+            <img src="front-view-woman-working-desk-while-wearing-headset-looking-laptop_23-2148434727.avif" alt="Digital Marketing Expert">
         </div>
     </section>
 
     <!-- Services Section -->
-    <h2 class="section-title" id="services">Services</h2>
-    <div class="services-grid">
-        <div class="service-card">
-            <h3>SEO Services</h3>
-            <p>Dominate search engines and attract qualified organic traffic with data-driven SEO strategies. From technical audits to content optimization, we ensure your business ranks where it matters most.</p>
-            <p class="tagline">"Visibility is profitability. Let’s get you found."</p>
-            <button onclick="location.href='#contact'">Learn More →</button>
+    <section class="section" id="services">
+        <div class="section-header">
+            <div class="section-badge">What I Offer</div>
+            <h2 class="section-title">Premium Digital Services</h2>
+            <p class="section-description">Comprehensive digital marketing solutions tailored to accelerate your business growth and maximize ROI.</p>
         </div>
-        
-        <div class="service-card">
-            <h3>Digital Marketing</h3>
-            <p>Scale your business with strategic digital campaigns across Google Ads, social media, email marketing, and more. We create integrated marketing solutions that drive conversions and ROI.</p>
-            <p class="tagline">"Smart marketing. Real results. Unstoppable growth."</p>
-            <button onclick="location.href='#contact'">Learn More →</button>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3>SEO Optimization</h3>
+                <p>Dominate search results and attract qualified organic traffic with advanced SEO strategies.</p>
+                <ul class="service-features">
+                    <li>Technical SEO audits</li>
+                    <li>Keyword research & strategy</li>
+                    <li>On-page optimization</li>
+                    <li>Link building campaigns</li>
+                    <li>Local SEO for Dubai</li>
+                </ul>
+                <button class="btn btn-primary" onclick="location.href='#contact'">Learn More</button>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">🚀</div>
+                <h3>Digital Marketing</h3>
+                <p>Strategic campaigns that drive conversions across all digital channels.</p>
+                <ul class="service-features">
+                    <li>Google Ads & PPC</li>
+                    <li>Social media marketing</li>
+                    <li>Email marketing campaigns</li>
+                    <li>Content marketing</li>
+                    <li>Analytics & reporting</li>
+                </ul>
+                <button class="btn btn-primary" onclick="location.href='#contact'">Learn More</button>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">💻</div>
+                <h3>Web Design</h3>
+                <p>Beautiful, high-converting websites that turn visitors into customers.</p>
+                <ul class="service-features">
+                    <li>Modern responsive design</li>
+                    <li>UX/UI optimization</li>
+                    <li>E-commerce solutions</li>
+                    <li>Fast loading speed</li>
+                    <li>Mobile-first approach</li>
+                </ul>
+                <button class="btn btn-primary" onclick="location.href='#contact'">Learn More</button>
+            </div>
         </div>
-        
-        <div class="service-card">
-            <h3>Website Design</h3>
-            <p>Transform your online presence with modern, mobile-responsive websites that convert visitors into customers. Beautiful design meets powerful functionality for maximum impact.</p>
-            <p class="tagline">"Your website is your digital storefront. Make it count."</p>
-            <button onclick="location.href='#contact'">Learn More →</button>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section" id="about">
+        <div class="section-header">
+            <div class="section-badge">Why Choose Me</div>
+            <h2 class="section-title">Trusted by Dubai Businesses</h2>
+            <p class="section-description">Delivering excellence through proven expertise and dedication.</p>
         </div>
-    </div>
+        <div class="trust-badges">
+            <div class="badge-item">
+                <div class="badge-icon">✅</div>
+                <div class="badge-text">Certified Expert</div>
+            </div>
+            <div class="badge-item">
+                <div class="badge-icon">🏆</div>
+                <div class="badge-text">Award Winning</div>
+            </div>
+            <div class="badge-item">
+                <div class="badge-icon">⚡</div>
+                <div class="badge-text">Fast Results</div>
+            </div>
+            <div class="badge-item">
+                <div class="badge-icon">💯</div>
+                <div class="badge-text">100% Transparency</div>
+            </div>
+        </div>
+    </section>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
-        <h2>Let's Grow Your Business Together</h2>
-        <p>Ready to transform your digital presence? Get in touch for a free consultation.</p>
-        <button class="contact-btn" onclick="window.location.href='mailto:contact@pulidigital.com'">Get Free Consultation</button>
+        <h2>Ready to Transform Your Digital Presence?</h2>
+        <p>Let's discuss how I can help you achieve your business goals. Get a free consultation today!</p>
+        <button class="btn" onclick="window.location.href='mailto:contact@pulidigital.com'">Get Free Consultation →</button>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Puli Digital. All rights reserved. | SEO, Digital Marketing & Website Design Services in Dubai</p>
+        <p>© 2025 Puli Digital | Professional SEO, Digital Marketing & Web Design Services in Dubai</p>
+        <p style="margin-top: 0.5rem; font-size: 0.85rem;">📧 contact@pulidigital.com | 📍 Dubai, UAE</p>
     </footer>
+
 </body>
 </html>
